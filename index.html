@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            margin: 45px auto;
+            padding: 20px;
+            border: 3px solid black;
+            width: 120px;
+            height: 120px;
+            background-color: red;
+            display:grid;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        img{
+            height: 120px;
+            width: 120px;
+        }
+        
+        input{
+            border: 2px solid blue;
+        }
+
+
+        .nav1 ~ #rotate {
+            border: 2px solid red;
+        }
+        section{
+            perspective: 150px;
+        }
+        #trans:checked ~ .nav{
+            transform: translate(none);
+
+        }
+        #rotate:checked ~ .nav{
+            transform: rotate(10deg);
+        }
+        #rotate1:checked ~ .nav{
+            transform: rotate(45deg);
+        }
+        #rotate2:checked ~ .nav{
+            transform: rotate3d(10,5,5,45deg);
+        }
+        #rotate3:checked ~ .nav{
+            transform: rotateX(80deg);
+        }
+        #rotate4:checked ~ .nav{
+            transform: rotateY(120deg);
+        }   
+        #skew1:checked ~ .nav{
+            transform: skewX(30deg);
+        }
+        #skew2:checked ~ .nav{
+            transform: skewY(40deg);
+        }
+        #scale1:checked ~ .nav{
+            transform: scale(2,2);
+        }
+        #translate:hover ~ .nav{
+            transform: translate(20px,20px);
+        }
+        .nav1{
+            border: 3px solid;
+            background-attachment: fixed;
+            background-color:blanchedalmond;
+            padding: 20px;
+        }
+        .nav1 #trans{
+            border: 3px solid;
+            color: red;
+        }
+       
+    </style>
+</head>
+<body>TRASFORM PROPERTIES
+    
+    <h1></h1>
+    
+        <div class="nav1">
+            <input type="radio" id="trans" name="raghu">Transform: none;<br>
+            <input type="radio" id="rotate" name="raghu">transform: rotate(10deg);<br>
+            <input type="radio" id="rotate1" name="raghu">transform: rotate(45deg);<br>
+            <input type="radio" id="rotate2" name="raghu">transform: rotate3d(1,2,1,45deg);<br>
+            <input type="radio" id="rotate3" name="raghu">transform: rotateX(90deg);<br>
+            <input type="radio" id="rotate4" name="raghu">transform: rotateY(120deg);<br>
+            <input type="radio" id="skew1" name="raghu">transform: skewX(30deg);<br>
+            <input type="radio" id="skew2" name="raghu">transform: skewY(40deg);<br>
+            <input type="radio" id="scale1" name="raghu">transform: scale(2,52);<br>
+            <input type="radio" id="translate" name="raghu">transform: translate(20px,20px);<br>
+        <div class="nav"><img src="./raghu2.jpg" alt=""></div>
+        </div>
+        <button>
+            <label for="trans"></label>
+            <label for="rotate"></label>
+            <label for="rotate1"></label>
+            <label for="rotate2"></label>
+            <label for="rotate3"></label>
+            <label for="rotate4"></label>
+            <label for="skew1"></label>
+            <label for="skew2"></label>
+            <label for="scale1"></label>
+            <label for="translate"></label>
+        </button>
+        </div>
+
+</body>
+</html>
